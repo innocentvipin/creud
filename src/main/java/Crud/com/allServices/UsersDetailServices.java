@@ -1,13 +1,9 @@
 package Crud.com.allServices;
 
 import Crud.com.Entity.UserDetail;
-import Crud.com.repositories.UserRespositiry;
+import Crud.com.repositories.UserDetailRespositiry;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
 import java.util.Objects;
@@ -15,7 +11,7 @@ import java.util.Objects;
 @Service
 public class UsersDetailServices {
     @Autowired
-   private UserRespositiry userRespositiry;
+   private UserDetailRespositiry userRespositiry;
 
     public UserDetail findByid(String id){
         return userRespositiry.getReferenceById(id);
