@@ -18,6 +18,7 @@ public class AuthController {
 
     @PostMapping("/logging")
     public ResponseEntity<LoggingResponseDto> loging(@RequestBody LoggingRequestDto loggingRequestDto){
+        System.out.println("********************");
         return ResponseEntity.ok(authServices.login(loggingRequestDto));
     }
 

@@ -33,6 +33,7 @@ public class UsersDetailServices {
     public List<UserDetail> getall(){
        List<UserDetail> allUser = userRespositiry.findAll();
        Thread t1 = new Thread();
+       t1.run();
        return allUser;
     }
 
